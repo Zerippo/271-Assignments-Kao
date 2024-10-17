@@ -26,11 +26,34 @@ public class FastQ {
     } // default constructor
 
     public boolean add(String string) {
-        return false;
+        boolean success = false;
+
+        if (used > size){
+            success = false;
+        }
+        else{
+            array[back] = string;
+            back = (back + 1) % size;
+            used++;
+            success = true;
+        }        
+
+        return success;
     } // method add
 
     public String remove() {
-        return null;
+        String success = null;
+        
+        if (used > 0){
+            success = array[front];
+            array[front] = null;
+            used --;
+            front = (front + 1) % size;;
+        }
+        
+        return success;
+
+        
     } // method remove
     
 } // class FastQ
