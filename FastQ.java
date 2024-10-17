@@ -28,7 +28,7 @@ public class FastQ {
     public boolean add(String string) {
         boolean success = false;
 
-        if (used > size){
+        if (used >= size){
             success = false;
         }
         else{
@@ -42,16 +42,16 @@ public class FastQ {
     } // method add
 
     public String remove() {
-        String success = null;
+        String removedElement = null;
         
         if (used > 0){
-            success = array[front];
+            removedElement = array[front];
             array[front] = null;
             used --;
-            front = (front + 1) % size;;
+            front = (front + 1) % size;
         }
         
-        return success;
+        return removedElement;
 
         
     } // method remove
