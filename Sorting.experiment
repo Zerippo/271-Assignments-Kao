@@ -1,0 +1,42 @@
+I tested the times it would take each sort method 10 times, and took the average. 
+Insertion sort was faster only when the size of the array was small.
+Merge sort starts to catch up when it hit size of 50.
+Once the size of the array reached 1,000, the time to sort grew exponentially. 
+The difference in speed was so bad that Merge sort was faster even though the size was 20 times greater.
+
+In conclusion, Instertion sort is faster than merge sort at smaller sizes(t<50), however more than that, insertion sort starts to exponentially get slower.
+
+Insertion Sort
+size of array    |   time (µs)
+2	               |	 0.98
+4	               | 	 1.10
+6	               |   1.55
+8                |   2.10
+10	             |   8.82
+20		           |   10.92
+50		           |   50.21
+100	             |   250.82
+1,000            |	 23,544.55
+5,000	           |   546,924.83
+
+Merge Sort
+size of array    |   time (µs)
+2	               |	 1.69
+4	               |	 2.96
+6	               |	 4.74
+8	               |	 6.25
+10	             |   24.80
+20	             |   23.17
+50	             |   57.70
+100	             |   182.63
+1,000            |	 2,049.21
+5,000	           |   10,838.51
+10,000	         |   25,754.21
+20,000	         |   45,038.46
+30,000	         |   70,834.40
+40,000	         |   96,924.54
+50,000	         |   131,406.78
+100,000	         |   305,682.66
+
+
+
